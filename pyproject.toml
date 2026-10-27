@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pkilton-catastrophic"
+version = "0.1.0"
+description = "比较微调前后在原任务上的表现，标出退化项与幅度"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "pkilton" }]
+keywords = ["llm", "cli", "analysis", "observability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://pkilton.github.io"
+Repository = "https://github.com/pkilton/catastrophic"
+Issues = "https://github.com/pkilton/catastrophic/issues"
+
+[project.scripts]
+catastrophic = "catastrophic:main"
+
+[tool.setuptools]
+py-modules = ["catastrophic"]
